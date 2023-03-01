@@ -27,12 +27,14 @@ public struct AnimatedMenuBar: View {
 						.foregroundColor(.white)
 						.matchedGeometryEffect(id: "menuItem", in: menuItemTransition)
 						.lineLimit(1)
+						.minimumScaleFactor(0.00001)
 				} else {
 					Text(menuItems[index])
 						.padding(.horizontal)
 						.padding(.vertical, 4)
 						.background(Capsule().foregroundColor(Color( red: 244, green: 244, blue: 244)))
 						.lineLimit(1)
+						.minimumScaleFactor(0.00001)
 						.onTapGesture {
 							selectedIndex = index
 						}
